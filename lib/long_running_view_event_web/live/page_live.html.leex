@@ -1,7 +1,18 @@
 <section class="phx-hero">
+  <form phx-submit="run_for_29_seconds">
+    <h1>29 second process</h1>
+    <p>Click following button to change button text</p>
+    <button type="submit"><%= @value_29 %></button>
+  </form>
+  <form phx-submit="run_for_31_seconds">
+    <h1>31 second process</h1>
+    <p>Click following button to change button text</p>
+    <button type="submit"><%= @value_31 %></button>
+  </form>
+</section>
+<section class="phx-hero">
   <h1>Welcome to Phoenix!</h1>
   <p>Peace of mind from prototype to production</p>
-
   <form phx-change="suggest" phx-submit="search">
     <input type="text" name="q" value="<%= @query %>" placeholder="Live dependency search" list="results" autocomplete="off"/>
     <datalist id="results">
@@ -12,7 +23,6 @@
     <button type="submit" phx-disable-with="Searching...">Go to Hexdocs</button>
   </form>
 </section>
-
 <section class="row">
   <article class="column">
     <h2>Resources</h2>

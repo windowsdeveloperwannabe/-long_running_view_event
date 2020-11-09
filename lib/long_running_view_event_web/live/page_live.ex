@@ -3,7 +3,19 @@ defmodule LongRunningViewEventWeb.PageLive do
 
   @impl true
   def mount(_params, _session, socket) do
-    {:ok, assign(socket, query: "", results: %{})}
+    {:ok, assign(socket, query: "", results: %{}, value_29: "Unchanged", value_31: "Unchanged")}
+  end
+
+  @impl true
+  def handle_event("run_for_29_seconds", _params, socket) do
+    :timer.sleep(29000)
+    {:noreply, assign(socket, value_29: "29 second reply success")}
+  end
+
+  @impl true
+  def handle_event("run_for_31_seconds", _params, socket) do
+    :timer.sleep(31000)
+    {:noreply, assign(socket, value_31: "31 second reply success")}
   end
 
   @impl true
