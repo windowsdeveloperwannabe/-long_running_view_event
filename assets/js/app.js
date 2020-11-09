@@ -41,6 +41,7 @@ window.addEventListener('phx:page-loading-stop', info => {
 
 // connect if there are any LiveViews on the page
 liveSocket.connect()
+liveSocket.enableDebug()
 
 // expose liveSocket on window for web console debug logs and latency simulation:
 // >> liveSocket.enableDebug()
